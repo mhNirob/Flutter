@@ -6,13 +6,13 @@ Install flutter and run these projects :+1:
 
 Course projects are from [this](www.udemy.com/learn-flutter-beginners-course/) udemy flutter course
 
-######Project Details
+## Project Details
 
-- course_first
-<p>
+- ### course_first
+
+
 This project is about flutter state. Both stateless and stateful widget was added.
-In statefull widget there is **initState()** and **setState(() {})**.
-</p>
+In statefull widget there is ** initState() ** and ** setState(() {}) **.
 
 ---
 
