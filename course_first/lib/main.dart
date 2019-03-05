@@ -41,7 +41,6 @@ class _applicationSState extends State<applicationS> {
     // TODO: implement initState
     ttext = 'initial : click this';
     super.initState();
-
   }
 
   void method(){
