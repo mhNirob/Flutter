@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(listView());
+void main() => runApp(listWidgetArray());
 
 
 class application extends StatelessWidget {
@@ -81,5 +81,47 @@ class listView extends StatelessWidget {
     );
   }
 }
+
+
+class listWidgetArray extends StatefulWidget {
+  @override
+  _State createState() => _State();
+}
+
+class _State extends State<listWidgetArray> {
+
+  List<int> items = new List();
+  List<int> items2 = new List();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    for(int i=0;i<20;i++){
+      items2.add(i);
+    }
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Array list',
+      home: new Scaffold(
+        appBar: new AppBar(title: new Text('Array list appbar'),),
+        body: new ListView.builder(
+          itemCount: items2.length,
+          itemBuilder: (BuildContext context, int index){
+            return new ListTile(
+              title: new Text('title no : $index'),
+              trailing: new Icon(Icons.arrow_forward),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+
 
 
