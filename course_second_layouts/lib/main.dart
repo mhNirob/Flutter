@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(rowcolumn());
+void main() => runApp(listView());
 
 
 class application extends StatelessWidget {
@@ -46,6 +46,35 @@ class rowcolumn extends StatelessWidget {
             ),
             new Text('is'),
             new Text('row'),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+class listView extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Basic List Widget',
+      home: new Scaffold(
+        appBar: new AppBar(title: new Text('App bar Basic list view'),),
+        body: new ListView(
+          children: <Widget>[
+            new ListTile(
+              title: new Text('tile 1'),
+              trailing: new Icon(Icons.list),
+            ),
+            new ListTile(
+              title: new Text('tile 2'),
+              trailing: new Icon(Icons.list),
+            ),
+            new ListTile(
+              title: new Text('tile 3'),
+              trailing: new Icon(Icons.list),
+            ),
           ],
         ),
       ),
