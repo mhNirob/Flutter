@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(application());
+void main() => runApp(rowcolumn());
+
 
 class application extends StatelessWidget {
   @override
@@ -23,3 +24,33 @@ class application extends StatelessWidget {
     );
   }
 }
+
+class rowcolumn extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Row Column',
+       home: new Scaffold(
+        appBar: new AppBar(title: new Text('Row Column Appbar'),),
+        body: new Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            new Text('This'),
+            new Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                new Text('This'),
+                new Text('is'),
+                new Text('Column'),
+              ],
+            ),
+            new Text('is'),
+            new Text('row'),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
